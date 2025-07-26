@@ -1,4 +1,4 @@
-# Wallet Risk Scoring System - DEMO
+# Wallet Risk Scoring System 
 
 **Live Demo of DeFi Wallet Risk Assessment**
 
@@ -33,7 +33,7 @@ This will:
 5. **Activity Risk (10%)** - Engagement levels
 6. **Repayment Risk (10%)** - Debt management history
 
-## Demo Output Files
+##  Output Files
 
 After running the demo, you will receive:
 
@@ -46,11 +46,11 @@ output/
 └── detailed_risk_analysis.json   # Complete risk breakdown
 ```
 
-## Expected Demo Results
+## Expected Results
 
 The demo checks model accuracy by comparing calculated scores with intended risk profiles:
 
-| Wallet | Demo Profile | Expected Score Range | Calculated Score | Status |
+| Wallet |  Profile | Expected Score Range | Calculated Score | Status |
 |--------|-------------|---------------------|------------------|---------|
 | 0xfaa... | Very High | 801-1000 | ~850 | Correct |
 | 0x742... | Low | 201-400 | ~320 | Correct |
@@ -79,7 +79,7 @@ Max risk score: 847
 Model Accuracy: 8/10 (80.0%)
 ```
 
-## Individual Demo Scripts
+## Individual Scripts
 
 ### Generate Sample Data Only:
 ```bash
@@ -117,7 +117,7 @@ self.weights = {
 ### Modify Risk Thresholds:
 Edit the scoring logic in individual risk calculation methods.
 
-## Demo Validation
+## Validation
 
 The demo includes built-in validation:
 - Data Generation: Creates realistic transaction patterns
@@ -125,7 +125,7 @@ The demo includes built-in validation:
 - Result Validation: Compares calculated versus expected scores
 - Output Format: Generates required CSV and JSON files
 
-## Demo Limitations
+## Limitations
 
 This demo uses:
 - Simulated data (not real blockchain transactions)
