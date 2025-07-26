@@ -114,7 +114,7 @@ class CompoundDataFetcher:
                     underlyingSymbol
                 }
             }
-            liquidationEvents(where: {borrower: $account}, orderBy: blockTime, orderDirection: desc, first: 50) {
+            liquidationEvents(where:{borrower: $account}, orderBy:blockTime, orderDirection:desc,first:50) {
                 id
                 amount
                 borrower
@@ -138,7 +138,7 @@ class CompoundDataFetcher:
         try:
             response=requests.post(
                 self.compound_v2_url,
-                json={"query": query,"variables":variables},
+                json={"query":query,"variables":variables},
                 timeout=30
             )
             
@@ -223,7 +223,7 @@ class CompoundDataFetcher:
         print(f"💾 Backup saved to {backup_filename}")
 
 def main():
-    fetcher = CompoundDataFetcher()
+    fetcher=CompoundDataFetcher()
     
     print("COMPOUND PROTOCOL DATA FETCHER")
     print("=" * 50)
@@ -242,7 +242,7 @@ def main():
     print(f"\n DATA FETCH COMPLETED!")
     print(f" Total wallets processed: {len(wallet_data)}")
     print(f" Active wallets found: {active_wallets}")
-    print(f" Data saved to: data/compound_wallet_data.json")
+    print(f" Data saved to:data/compound_wallet_data.json")
     print(f" Ready for risk scoring analysis!")
 
 if __name__ == "__main__":
